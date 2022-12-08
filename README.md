@@ -21,6 +21,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
 </div>
 
 <h1>Endpoints</h1>
+<br>
 <h2>Customer:</h2>
 
 <div align="justify">
@@ -37,6 +38,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
   GET localhost:3030/customer
 
 </div>
+<br>
 
 <h2>Dishes:</h2>
 
@@ -83,6 +85,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
   GET localhost:3030/dishes/
 
 </div>
+<br>
 
 <h2>Order:</h2>
 
