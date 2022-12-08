@@ -1,16 +1,16 @@
-##Sobre o projeto
+<h1>Sobre o projeto</h1>
 
 <div align="justify">
 O projeto consiste no backend de uma aplicação para um restaurante que possui tablets nas mesas, para que os clientes façam seus pedidos. Foi desenvolvida uma API Restfull que consome um banco de dados relacional, utilizando Node.js, Express, Typescript e MySQL. As três rotas da aplicação foram testadas utilizando mocha, chai e chai-Http.
 </div>
 
-###Pré-requisitos
+<h2>Pré-requisitos</h2>
 
 <div align="justify">
 Para rodar o projeto, é necessário possuir MySQL e Node.
 </div>
 
-###Como iniciar o projeto
+<h2>Como iniciar o projeto</h2>
 
 <div align="justify">
 Após clonar o projeto, rode o comando 'npm install' na raiz e configure as variáveis de ambiente, de acordo com o arquivo .env.example. Inicie o banco de dados utilizando o arquivo 'concent.sql'.
@@ -20,8 +20,8 @@ No diretório backend rodar o comando 'npm run dev' e realizar as requisições 
 Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório backend.
 </div>
 
-##Endpoints
-####Customer:
+<h1>Endpoints</h1>
+<h2>Customer:</h2>
 
 <div align="justify">
 
@@ -38,7 +38,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
 
 </div>
 
-####Dishes:
+<h2>Dishes:</h2>
 
 <div align="justify">
 
@@ -50,7 +50,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
   GET localhost:3030/dishes/search?q=bebidas
 <br>
 
-- para inativar um prato:
+- para inativar um prato (este endpoint não deleta):
   DELETE localhost:3030/dishes/:id
 <br>
 
@@ -84,7 +84,7 @@ Para rodar os testes da aplicação, rodar o comando 'npm test' no diretório ba
 
 </div>
 
-####Order:
+<h2>Order:</h2>
 
 <div align="justify">
 
