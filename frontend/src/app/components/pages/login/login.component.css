@@ -1,13 +1,25 @@
-  body {
-    background-image: ;
-  }
-
   .example-full-width {
     width: 100%;
   }
-
+  
+  .example-card {
+    align-items: center;
+    background-image: url('../../../../assets/wood.jpg');
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .second-card {
+    background-color: #424242;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    min-width: 300px;
+  }
   .example-button-row {
-    display: table-cell;
-    max-width: 600px;
-    color: aqua;
+    height: 40px;
+    width: 100%;
   }
