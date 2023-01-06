@@ -1,57 +1,42 @@
-<h1>Login</h1>
 <mat-card class="example-card">
-    <mat-card-content>
+    <mat-card-content class="second-card">
       <form class="example-form">
         <mat-form-field class="example-full-width">
           <mat-label>Mesa</mat-label>
-          <input matInput disabled value="1">
+          <input matInput disabled value="{{ table }}">
         </mat-form-field>
-      
-        <!-- <table class="example-full-width" cellspacing="0"><tr>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>Name</mat-label>
-            <input matInput>
-          </mat-form-field></td>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>CPF</mat-label>
-            <input matInput>
-          </mat-form-field></td>
-        </tr></table> -->
       
         <p>
           <mat-form-field class="example-full-width">
             <mat-label>Nome</mat-label>
-            <textarea matInput placeholder="Digite seu nome"></textarea>
+            <input
+              type="text"
+              matInput
+              placeholder="Digite seu nome"
+              [(ngModel)]="name"
+              name="name"
+              >
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>CPF</mat-label>
-            <textarea matInput></textarea>
+            <input
+              type="text"
+              matInput
+              [(ngModel)]="cpf"
+              name="cpf"
+            >
           </mat-form-field>
         </p>
       
-        <!-- <table class="example-full-width" cellspacing="0"><tr>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>City</mat-label>
-            <input matInput placeholder="Ex. San Francisco">
-          </mat-form-field></td>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>State</mat-label>
-            <input matInput placeholder="Ex. California">
-          </mat-form-field></td>
-          <td><mat-form-field class="example-full-width">
-            <mat-label>Postal Code</mat-label>
-            <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
-            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-          </mat-form-field></td>
-        </tr></table> -->
     </form>
-    </mat-card-content>
-    <div class="example-button-row">
-        <button mat-raised-button>Entrar</button>
-        <!-- <button mat-raised-button color="primary">Primary</button>
-        <button mat-raised-button color="accent">Accent</button>
-        <button mat-raised-button color="warn">Warn</button>
-        <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
-      </div>
+  <div>
+    
+    <button
+    mat-stroked-button
+    color="accent"
+    class="example-button-row"
+    (click)="handleClick()"
+    >Logar</button>
+  </div>
+  </mat-card-content>
   </mat-card>
