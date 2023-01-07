@@ -1,0 +1,23 @@
+* {
+    background-color: #424242;
+    margin: 0;
+}
+
+nav {
+    height: 50px;
+    min-width: 300px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+ul, li {
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-top: 15px;
+}

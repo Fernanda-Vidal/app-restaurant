@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { appendFile } from 'fs';
 import { CustomerService } from 'src/app/services/customer/customer.service';
 import { ICustomer } from '../../../../../../backend/src/interfaces';
 import { Router } from '@angular/router';
