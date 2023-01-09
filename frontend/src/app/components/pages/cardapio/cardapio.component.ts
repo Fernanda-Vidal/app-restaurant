@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { DishService } from 'src/app/services/dishes/dish.service';
 
 import { IDish } from '../../../../../../backend/src/interfaces';
@@ -8,23 +8,25 @@ import { IDish } from '../../../../../../backend/src/interfaces';
   templateUrl: './cardapio.component.html',
   styleUrls: ['./cardapio.component.css']
 })
-export class CardapioComponent implements OnInit {
-  oneCategory: string = 'Pratos Quentes';
-  
-  constructor(private dishesService: DishService) {}
-  
+export class CardapioComponent {
   allDishes: IDish[] = [];
-  ngOnInit(): void {
+  
+  constructor(private dishesService: DishService) {
+    this.dishesService.getAllDishes().subscribe((items) => {
+    this.allDishes = items; 
+    })}
 
-      this.dishesService.getAllDishes().subscribe((items) => {
-      this.allDishes = items;
-      console.log('data', this.allDishes);
-      })
-  };
 
-  handleClick(category: string) {
-    this.oneCategory = category
-    console.log(this.oneCategory)
+    changeCategory(category: string) {
+    this.dishesService.changeCategory(category).subscribe((items: any) => {
+      this.allDishes = items; 
+    })
+  }
+
+    getAll() {
+    this.dishesService.getAllDishes().subscribe((items) => {
+      this.allDishes = items; 
+    })
   }
 
 }

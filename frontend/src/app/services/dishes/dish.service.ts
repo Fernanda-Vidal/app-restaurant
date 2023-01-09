@@ -18,4 +18,12 @@ private apiUrl = `${environment.baseApiUrl}dishes`;
   getAllDishes(): Observable<IDish[]> {
     return this.http.get<IDish[]>(this.apiUrl);
   }
+
+  changeCategory(category: string): Observable<IDish[]> {
+    return this.http.get<IDish[]>(`${this.apiUrl}/search?q=${category}`);
+  }
+
+  // getColdDish(): Observable<IDish[]> {
+  //   return this.http.get<IDish
+  // }
 }

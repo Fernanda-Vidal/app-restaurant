@@ -3,23 +3,23 @@
 <div class="categoriesButton">
     <button
         mat-stroked-button
-        (click)="handleClick('pratos quentes')"
+        (click)="changeCategory('pratos quentes')"
     >
     Pratos Quentes</button>
     <button
         mat-stroked-button
-        (click)="handleClick('pratos frios')"
+        (click)="changeCategory('pratos frios')"
     >
     Pratos Frios</button>
     <button
         mat-stroked-button
-        (click)="handleClick('bebidas')"
+        (click)="changeCategory('bebidas')"
     >
     Bebidas
     </button>
     <button
         mat-stroked-button
-        (click)="handleClick('')"
+        (click)="getAll()"
     >
     Todos
     </button>
