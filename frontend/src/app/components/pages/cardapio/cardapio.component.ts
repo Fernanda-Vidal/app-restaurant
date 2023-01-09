@@ -9,13 +9,16 @@ import { IDish } from '../../../../../../backend/src/interfaces';
   styleUrls: ['./cardapio.component.css']
 })
 export class CardapioComponent implements OnInit {
-  dish?: IDish;
-
+  
   constructor(private dishesService: DishService) {}
-  async ngOnInit() {
-    const aaa = await this.dishesService.getAllDishes().subscribe()
+  
+  allDishes: IDish[] = []
+  ngOnInit(): void {
+    this.dishesService.getAllDishes().subscribe((items) => {
+      this.allDishes = items;
+      console.log('data', this.allDishes);
+    })
     
-    console.log(aaa)
   }
 
 

@@ -1,5 +1,9 @@
 * {
    background-color: #424242;
    color: white;
+}
+
+.main-menu {
    height: 100vh;
+   padding-left: 15px;
 }
