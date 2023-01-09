@@ -19,5 +19,5 @@ ul, li {
     display: flex;
     justify-content: flex-end;
     margin-left: 10px;
-    margin-top: 15px;
+    padding-top: 15px;
 }

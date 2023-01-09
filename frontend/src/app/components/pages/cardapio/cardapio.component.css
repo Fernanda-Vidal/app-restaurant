@@ -3,7 +3,29 @@
    color: white;
 }
 
-.main-menu {
-   height: 100vh;
+h1 {
    padding-left: 15px;
+   margin: 0;
+}
+
+button {
+   margin-top: 5px;
+   width: 33%;
+}
+
+.categoriesButton {
+   display: flex;
+   /* height: 15px; */
+}
+
+.othersButton {
+   display: flex;
+   justify-content:space-between;
+}
+
+.othersButton, button {
+   border: 1px solid white;
+   /* box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3); */
+   display: flex;
+   width: 49.8%;
 }
