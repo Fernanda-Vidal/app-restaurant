@@ -8,7 +8,8 @@
     Pratos Quentes</button>
     <button
         mat-stroked-button
-        (click)="changeCategory('pratos frios')"
+        (click)="changeCategory('pratos frios
+        ')"
     >
     Pratos Frios</button>
     <button
@@ -24,18 +25,26 @@
     Todos
     </button>
 </div>
-<mat-card *ngFor="let dish of allDishes" class="example-card">
-    <mat-card-header>
+
+<div class="main">
+    <mat-card *ngFor="let dish of allDishes" class="example-card">
+        <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ dish.title }}</mat-card-title>
       <mat-card-subtitle>{{ dish.category }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{ dish.photo }}" alt="{{ dish.title }} - {{ dish.category }}">
+    <img class="image" mat-card-image src="{{ dish.photo }}" alt="{{ dish.title }} - {{ dish.category }}">
     <!-- <mat-card-actions> -->
-    <div class="categoriesButton">
-      <button mat-stroked-button>LIKE</button>
-      <button mat-stroked-button>SHARE</button>
+        <div class="categoriesButton">
+            <div class="qtdButtons">
+                <div class="qtd">{{ quantity }}</div>
+                <button (click)="handleIncrease()" mat-stroked-button>+</button>
+                <div>QTD</div>
+                <button (click)="handleDecrease()" mat-stroked-button>-</button>
+            <button mat-stroked-button>ADICIONAR PEDIDO</button>
+        </div>
+      <!-- <button mat-stroked-button>SHARE</button> -->
     </div>
     <!-- </mat-card-actions> -->
-  </mat-card>
-  
+</mat-card>
+</div>

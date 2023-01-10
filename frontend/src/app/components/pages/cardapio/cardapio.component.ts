@@ -10,6 +10,7 @@ import { IDish } from '../../../../../../backend/src/interfaces';
 })
 export class CardapioComponent {
   allDishes: IDish[] = [];
+  quantity: number = 0;
   
   constructor(private dishesService: DishService) {
     this.dishesService.getAllDishes().subscribe((items) => {
@@ -29,4 +30,12 @@ export class CardapioComponent {
     })
   }
 
+  handleIncrease () {
+    this.quantity += 1;
+  }
+
+  handleDecrease () {
+    if (this.quantity === 0) return '';
+    return this.quantity -= 1;
+  }
 }
