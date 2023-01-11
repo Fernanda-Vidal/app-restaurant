@@ -1,1 +1,19 @@
+<app-header></app-header>
 <h1>Meus Pedidos</h1>
+<div class="main">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div *ngFor="let order of orders" mat-card-avatar class="example-header-image">
+                <mat-card-title>{{ order.id }}</mat-card-title>
+                <mat-card-title>{{ order.status }}</mat-card-title>
+                <mat-card-subtitle>{{ order.customer_id }}</mat-card-subtitle>
+            </div>
+        </mat-card-header>
+        <img class="image" mat-card-image src="" alt="">
+        <mat-card-actions>
+        <div class="categoriesButton">
+      <button mat-stroked-button>SHARE</button>
+        </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

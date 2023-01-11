@@ -1,0 +1,20 @@
+* {
+    background-color: #424242;
+    color: white;
+}
+
+.main {
+    height: 100vh;
+    /* margin: 1%; */
+}
+
+.example-card {
+    margin-top: -16px;
+}
+
+.example-header-image {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    /* width: 50px; */
+ }
