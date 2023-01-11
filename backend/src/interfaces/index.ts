@@ -8,9 +8,9 @@ export interface IDish {
     active?: boolean,
 }
 
-interface IOrder {
+export interface IOrder {
     id?: number,
-    dishId: number,
+    customer_id: number,
     status: 'Pedido Realizado' | 'Em preparo' | 'Finalizado',
 }
 
