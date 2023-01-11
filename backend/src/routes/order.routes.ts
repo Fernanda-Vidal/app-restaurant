@@ -6,7 +6,7 @@ const router = Router();
 const orderController = new OrderController();
 
 router.put('/:id/update', orderController.updateStatus);
-router.get('/:id', orderController.getById);
+router.get('/:id', orderController.getByCustomer);
 router.get('/', orderController.getAll);
 router.post('/', orderController.createOrder);
 

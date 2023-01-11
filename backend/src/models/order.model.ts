@@ -32,6 +32,14 @@ export default class OrderModel {
         return result;
     }
 
+    public async getByCustomer(customerId: number) {
+        const [result] = await this.connection.execute(
+            `SELECT * FROM Concent.Orders
+            WHERE customer_id = ?`, [customerId]
+        );
+        return result;
+    }
+
     public async updateStatus(orderId: number, status: string) {
         return this.connection.execute(
             `UPDATE Concent.Orders

@@ -15,14 +15,20 @@ export default class OrderController {
         return res.status(201).json(order);
     }
 
+    public getAll = async (req: Request, res: Response) => {
+        const orders = await this.service.getAll();
+        return res.status(200).json(orders);
+    }
+
     public getById = async (req: Request, res: Response) => {
         const { id } = req.params;
         const order = await this.service.getById(Number(id));
         return res.status(200).json(order);
     }
 
-    public getAll = async (req: Request, res: Response) => {
-        const orders = await this.service.getAll();
+    public getByCustomer = async (req: Request, res: Response) => {
+        const { id } = req.params;
+        const orders = await this.service.getByCustomer(Number(id));
         return res.status(200).json(orders);
     }
 

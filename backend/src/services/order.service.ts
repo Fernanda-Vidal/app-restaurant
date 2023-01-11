@@ -34,6 +34,12 @@ export default class OrderService {
         return order;
     }
 
+    public async getByCustomer(customerId: number) {
+        const orders = await this.model.getByCustomer(customerId);
+        if (!orders) throw new HttpException('No customer found', 404);
+        return orders;
+    }
+
     public async updateStatus(orderId: number, status: string) {
         return this.model.updateStatus(orderId, status);
     }
